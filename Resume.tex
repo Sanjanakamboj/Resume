@@ -1,0 +1,326 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\usepackage{graphicx}
+
+\RequirePackage{color}
+% \RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=1cm, scale=1]{geometry}
+\definecolor{371e77}{HTML}{371E77}
+
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+
+%tabularx environment
+\usepackage{tabularx}
+\usepackage[most]{tcolorbox}
+
+%for lists within the experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{Y}{>{\raggedright\arraybackslash}p}
+\newtcolorbox{summarybox}{
+  colback=white,
+  colframe=371e77,
+  boxrule=0.8pt,
+  arc=2pt,
+  left=6pt,
+  right=6pt,
+  top=5pt,
+  bottom=5pt
+}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\vspace{1pt}\titlerule\vspace{1pt}]
+\titlespacing{\section}{0pt}{4pt}{4pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+\definecolor{myPurple}{HTML}{371e77}
+
+\usepackage[unicode]{hyperref}
+\usepackage[normalem]{ulem} % for \uline
+
+% No forced hyperlink color:
+\hypersetup{
+    colorlinks=true,
+    linkcolor=.,   % inherit surrounding color
+    urlcolor=.,    % inherit surrounding color
+    citecolor=black
+}
+
+\newcommand{\ulhref}[2]{%
+  {\hypersetup{urlcolor=.}\textcolor{.}{\href{#1}{\uline{#2}}}}%
+}
+
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+% \usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+
+%============================================================
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+% ---------- Name ----------
+\color[HTML]{1C033C}\Huge{\textbf{SANJANA RANI}} \\[-0.15cm]
+
+% ---------- Designation ----------
+\color[HTML]{371e77}\large{\textit{Graduate Aerospace Engineer}}\\[0.3cm]
+
+% ---------- Contact Information ----------
+\textcolor[HTML]{371e77}{
+  \raisebox{-0.2\height}{\includegraphics[height=12pt]{mail.png}} \, sanjanakamboj98@gmail.com \, | \,
+  \raisebox{-0.2\height}{\includegraphics[height=12pt]{phone.png}} \, +91-9996673079 \, | \,
+    \raisebox{-0.2\height}{\includegraphics[height=12pt]{linkedin.png}} \, 
+\ulhref{https://linkedin.com/in/sanjana-rani}{linkedin.com/in/sanjana-rani}}
+
+\end{tabularx}
+
+% ---------- Professional Summary ----------
+\begin{summarybox}
+{\bfseries\color[HTML]{371e77}PROFESSIONAL SUMMARY}\\
+Aerospace engineer with hands-on CATIA V5 and Creo experience, including 3D modelling, 2D engineering drawings, and ISO GPS tolerancing for test rig assemblies. Complements design expertise with strong Python scripting skills for workflow automation and data processing with exposure to structural analysis (ABAQUS), CFD, and experimental setups.
+\end{summarybox}
+
+% %----------Skills----------
+\section{Key Skills}
+% \color[HTML]{371e77}\textbf{PM Tools \& Methodologies:} \color[HTML]{000000}Notion, Jira, ClickUp, Monday.com, Kanban\normalcolor\\
+\color[HTML]{371e77}\textbf{Design \& Simulation:} \color[HTML]{000000}CATIA-V5, Creo, SolidWorks, ANSYS Fluent, ABAQUS, Paraview\normalcolor\\
+\color[HTML]{371e77}\textbf{Data \& Programming:} \color[HTML]{000000}Python, MATLAB\normalcolor\\
+\color[HTML]{371e77}\textbf{Experimental \& Testing:} \color[HTML]{000000}Wind-tunnel Testing, PIV (including Stereo-PIV), Flow Visualization\normalcolor\\
+\color[HTML]{371e77}\textbf{Languages:} \color[HTML]{000000}English (Fluent), German (A1, improving), French (Beginner)\normalcolor
+
+
+%----------Experience----------
+\section{Professional Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{\ulhref{https://www.dlr.de/}{DLR Institute of Electrified Aero Engines (DLR e.V.)}}, Cottbus, Germany} \hfill \color[HTML]{371e77} \textit{Feb 2024 - Sep 2024} \\[2pt]
+\color[HTML]{371e77}\textbf{Graduate Research Assistant}\ \hfill \color[HTML]{4B28A4} \\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+        \item Coordinated the development, integration, and experimental validation for EMC testing of acoustic sensors as part of the \ulhref{https://www.dlr.de/en/as/research-and-transfer/projects/lu-ft-2-2030-effective-and-sustainable-noise-reduction-on-existing-aircraft}{LU(FT)\(^2\) 2030} project, liaising across engineering sub-teams and tracking milestone completion.
+        % \item Maintained structured technical documentation — test logs, measurement reports, and deviation records — to support project reporting and cross-team communication.
+        \item Designed and executed Python-based signal processing pipelines (FFT, coherence, spectral subtraction) to assess sensor performance, measurement integrity, and noise susceptibility under varying operational conditions.
+        % \item Identified and flagged deviations from test plans, supporting risk awareness and corrective actions with supervisors.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{\ulhref{https://www.b-tu.de/fg-aerodynamik-stroemungslehre}{Chair of Aerodynamics and Fluid Mechanics, BTU}}, Cottbus, Germany} \hfill \color[HTML]{371e77} \textit{Aug 2023 – Feb 2024}\\[2pt]
+\color[HTML]{371e77}\textbf{Student Assistant}\ \hfill \color[HTML]{4B28A4}  \\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+        \item Assisted with mechanical assembly, experimental setup, and flow-quality checks for the \ulhref{https://www.b-tu.de/en/news/article/27186-weightless-research-btu-team-investigates-convection-currents-in-free-fall}{TEKUS / DEPIK} zero-gravity convection project, ensuring alignment across setup, testing, and validation phases.
+        \item Created 2D engineering drawings of test rig components and full assembly using Creo, applying ISO GPS tolerancing standards based on original part dimensions to ensure dimensional accuracy and fit.
+        \item Conducted PIV and optical flow visualisation to analyse velocity fields, flow stability, and laminarity in experimental aerodynamic configurations.
+        % \item Monitored and documented experimental progress and maintained consistent data acquisition procedures across multiple test runs, and collaborated with team members to resolve issues and improve workflow efficiency.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+%---------- Education----------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Joint MSc in \ulhref{https://tfmasa.eu/}{Transfer of Fluid Materials in Aeronautical \& Space Applications (TFM-ASA)}} \hfill \color[HTML]{371e77} \textit{Sep 2022 - Sep 2024}
+\newline
+\color[HTML]{371e77}\textbf{\ulhref{https://www.u-bordeaux.fr/}{Université de Bordeaux} (Bordeaux, France) \ulhref{https://www.uclouvain.be/fr}{Université Catholique de Louvain} (Louvain-la-Neuve, Belgium) \ulhref{https://www.b-tu.de/en/}{Brandenburgische Technische Universität} (Cottbus, Germany)}\ \hfill \color[HTML]{4B28A4}  \\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+        \item \textbf{Thesis:} Electromagnetic Interference and its effects on Acoustic Sensor measurements
+        \item \textbf{Selected Coursework:} Experiments in Aerodynamics and Fluid Mechanics, Flow Measurement Techniques, Gasdynamics and Reacting Flows, Thermodynamics of Irreversible Phenomena.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{B.E. in Aerospace Engineering} \hfill \color[HTML]{371e77} \textit{Aug 2018 - Jun 2022}
+\newline
+\color[HTML]{371e77}\textbf{\ulhref{https://www.cuchd.in/engineering/be-aerospace.php?L_mx_Visit_Source=www.cuchd.in/}{Chandigarh University}, Gharaun, India}\ \hfill \color[HTML]{4B28A4}  \\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+        \item \textbf{Core Coursework:} Aerodynamics, Wind Tunnel Testing, Flight Mechanics, Aircraft Propulsion, CFD, Rocket Propulsion
+        \item \textbf{Final Project:} CFD Analysis of a hypersonic nozzle using ANSYS Fluent
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% %---------- Freelance----------
+% \section{Freelance \& Part-time Experience}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{{\ulhref{https://www.eqourse.com/}{eQOURSE}} — } \color[HTML]{371e77}\textbf{Operations Manager}\ \hfill \color[HTML]{4B28A4} \hfill \color[HTML]{371e77} \textit{Mar 2021 – Sep 2021} \\[2pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+%         \item Managed workflow and task assignments for high school mathematics and physics e-learning content creation teams, ensuring adherence to timelines and quality standards across concurrent projects.
+%         \item Conducted regular team meetings and coordinated efforts across contributors, fostering collaboration to consistently meet project objectives and deadlines.
+%         \item Oversaw operational planning and content quality, identifying process bottlenecks and streamlining workflows to improve team efficiency and output using Microsoft Excel and PowerPoint.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{{\ulhref{https://www.linkedin.com/company/freeco-education-private-limited/?originalSubdomain=in}{FreeCo Education Private Limited}} — } \color[HTML]{371e77}\textbf{Quality Analyst – Physics}\ \hfill \color[HTML]{4B28A4} \hfill \color[HTML]{371e77} \textit{Oct 2020 – Jan 2021}\\[2pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+%         \item Ensured quality objectives were met for physics educational content by maintaining adherence to specifications and standards, and identifying and resolving workflow issues to improve delivery efficiency.
+%         \item Supported documentation and reporting of quality metrics using LaTeX; coordinated task assignments to keep content production on schedule.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+
+
+
+
+
+
+
+%---------- Projects----------
+\section{Selected Projects}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{{\ulhref{https://www.simulationlab.in/}{Simulation Lab}} — } \color[HTML]{371e77}\textbf{Optimizing Subsonic Aircraft Aerodynamics}\ \hfill \color[HTML]{4B28A4} \hfill \color[HTML]{371e77} \textit{May 2023 – Jul 2023}\\[2pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+%         \item Conducted aerodynamic simulations in ANSYS Fluent to evaluate aircraft performance across varying conditions.
+%         \item Processed and analyzed simulation data using structured workflows to identify optimal configurations.
+%         \item Documented results and built repeatable analysis approaches for design evaluation.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{\ulhref{https://brahmastra.ltd/}{Brahmastra Research \& Development Center}} — } \color[HTML]{371e77}\textbf{Freelance Project Trainee}\ \hfill \color[HTML]{4B28A4} \hfill \color[HTML]{371e77} \textit{Apr 2023 – May 2023}\\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+        \item Designed and modeled a pintle injector in CATIA V5, developing parametric 3D geometry for rocket propulsion applications.
+        \item Built an integrated CAD-to-CFD workflow linking CATIA V5 geometry with ANSYS Fluent simulations, automating the handoff between design and analysis phases.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Self - initiated — } \color[HTML]{371e77}\textbf{Personal Project Coordination \& Scheduling System}\ \hfill \color[HTML]{4B28A4} \hfill \color[HTML]{371e77} \textit{Ongoing} \\[2pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+%         \item Designed a multi-workspace Notion dashboard using Agile/Scrum principles to manage active projects, task prioritisation, milestone tracking, and scheduling — directly analogous to tools used in programme coordination.
+%         \item Built Kanban boards, sprint planning views, and a job application tracker with status pipelines and follow-up scheduling, demonstrating ability to maintain and iterate on coordination dashboards.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Airfoil Aerodynamic Performance \& Flow Analysis — } \color[HTML]{371e77}\textbf{Brandenburgische Technische Universität}\ \hfill \color[HTML]{4B28A4} \hfill \color[HTML]{371e77} \textit{2024} \\[2pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+%         \item Measured surface pressure distributions on an airfoil in a subsonic wind tunnel and computed lift coefficients across multiple angles of attack; generated Cp distributions and Cl--$\alpha$ curves to assess aerodynamic performance and correlate with theory. \item Conducted 3D velocity field measurements around the airfoil using stereo Particle Image Velocimetry (stereo-PIV) in a water channel; processed data in PIVLab and visualised velocity vectors to study wake structures and flow features.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Turbine Stage Design Analysis — } \color[HTML]{371e77}\textbf{Université Catholique de Louvain}\ \hfill \color[HTML]{4B28A4} \hfill \color[HTML]{371e77} \textit{2023} \\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+        \item Performed 1D mean-line design of turbine stage given certain input boundary conditions to compute thermodynamic states and velocity triangles, followed by 2D aerodynamic design of a rotor blade passage.
+        \item Implemented blade geometry using Parablade, meshed the flow domain in GMSH, and conducted steady 2D compressible RANS simulations in SU2.
+        \item Post-processed aerodynamic performance using Python and ParaView, evaluating velocity, Mach number, and efficiency-related metrics.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Static Wind Tunnel Prototype — } \color[HTML]{371e77}\textbf{Chandigarh University}\ \hfill \color[HTML]{4B28A4} \hfill \color[HTML]{371e77} \textit{2019} \\[2pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+%         \item Designed a static prototype of a contraction-cone profile subsonic wind tunnel at \(1/5\) of the full-scale model dimensions, derived through dimensional analysis. 
+%         \item Produced 2D engineering drawings, selected materials, and supervised manual fabrication with attention to surface finish and geometric accuracy.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+
+
+% \textbf{Flow around Cylinders \& Wheel-Housing (2024):}
+% Conducted flow-visualisation and pressure/velocity assessments around cylinders and wheel-housing configurations. Used smoke/tufts and simple instrumentation to observe boundary-layer behaviour, recirculation zones, and configuration-dependent aerodynamic effects.
+% \vspace{0.25cm}
+
+% \textbf{Aerodynamics of Bluff Bodies (2023):}
+% Observed qualitative wind-tunnel flow-visualisation studies around bluff bodies to observe separation, shear-layer development, and vortex shedding. Used smoke/tufts to document wake structures and changes in flow behaviour with geometry and orientation. Interpreted patterns to understand fundamental aero-structure interaction effects.
+% \vspace{0.25cm}
+
+
+% \textbf{Airfoil Aerodynamic Performance (2023):}
+% Measured surface pressure distribution on an airfoil in a subsonic wind tunnel and calculated lift coefficients across multiple angles of attack. Processed static and dynamic pressure data to generate Cp distributions and plotted Cl–α curves to evaluate aerodynamic performance and compare trends with theoretical behaviour.
+% \vspace{0.25cm}
+
+% \textbf{Turbine Stage Design Analysis (2023)}
+% \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+%     \item Performed 1D mean-line design of turbine stage given certain input boundary conditions to compute thermodynamic states and velocity triangles, followed by 2D aerodynamic design of a rotor blade passage.
+%     \item Implemented blade geometry using Parablade, meshed the flow domain in GMSH, and conducted steady 2D compressible RANS simulations in SU2.
+%     \item Post-processed aerodynamic performance using Python and ParaView, evaluating velocity, Mach number, and efficiency-related metrics.
+% \end{itemize}
+% \vspace{0.2cm}
+
+
+% \textbf{Static Wind Tunnel Prototype (2019):}
+% Designed a static prototype of a contraction-cone profile subsonic wind tunnel at 1/5 of the full-scale model dimensions, derived through dimensional analysis. Produced 2D engineering drawings, selected materials, and supervised manual fabrication with attention to surface finish and geometric accuracy.
+% \vspace{0.25cm}
+
+
+% \textbf{Airfoil Aerodynamic Performance \& Flow Analysis (2023--2024)}
+% \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=2pt]
+%     \item Measured surface pressure distributions on an airfoil in a subsonic wind tunnel and computed lift coefficients across multiple angles of attack.
+%     \item Generated Cp distributions and Cl--$\alpha$ curves to assess aerodynamic performance and correlate with theory.
+%     \item Conducted 3D velocity field measurements around the airfoil using stereo Particle Image Velocimetry (PIV) in a water channel.
+% \end{itemize}
+% \vspace{0.2cm}
+
+
+% \textbf{Stereo-PIV Flow Measurement of Airfoil (2024):} 
+% Conducted 3D velocity field measurements around an airfoil using stereo Particle Image Velocimetry (PIV) in a water channel. Applied tracer particles and light-sheet illumination to capture flow structures, processed data in PIVLab, and visualized velocity vectors to study aerodynamic behavior and flow features. \textit{Tools Used: Python (ffmpeg), PIVLab, Optical Measurement Methods, Water Channel}
+% \vspace{0.25cm}
+
+% \color[HTML]{371E77}\textbf{Formation Flight Aerodynamics (2023): }\color[HTML]{000000}Applied Prandtl Lifting Line Theory to model leader-trailer aerodynamic interaction in extended formation flight. Computed spanwise circulation, induced drag, wake-induced velocities, and rolling moments for untrimmed and trimmed trailer configurations. Assessed induced drag reduction and trim effects using a reduced-order aerodynamic model implemented in Python.
+% \vspace{0.2cm}
+
+% \textbf{Turbine Stage Design Analysis (2023): }Performed 1D mean-line design of turbine stage given certain input boundary conditions to compute thermodynamic states and velocity triangles, followed by 2D aerodynamic design of a rotor blade passage. Implemented blade geometry using Parablade, meshed the flow domain in GMSH, and conducted steady 2D compressible RANS simulations in SU2. Post-processed aerodynamic performance using Python and ParaView, evaluating velocity, Mach number, and efficiency-related metrics.
+% \vspace{0.2cm}
+ 
+% \color[HTML]{371E77}\textbf{Airfoil Aerodynamic Performance \& Flow Analysis (2023--2024): }\color[HTML]{000000}Measured surface pressure distributions on an airfoil in a subsonic wind tunnel and computed lift coefficients across multiple angles of attack; generated Cp distributions and Cl--$\alpha$ curves to assess aerodynamic performance and correlate with theory. Conducted 3D velocity field measurements around the airfoil using stereo Particle Image Velocimetry (stereo-PIV) in a water channel; processed data in PIVLab and visualised velocity vectors to study wake structures and flow features.
+% \vspace{0.2cm}
+
+
+% %---------- Projects----------
+% \section{}
+% \textbf{NOTE TO REVIEWER}: My CATIA V5 experience is currently design-focused; I am actively learning CATIA V5 API scripting via Pywin32/COM and can onboard quickly given my existing Python automation background and deep aerospace domain context.
+
+\end{document}

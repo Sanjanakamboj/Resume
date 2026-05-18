@@ -1,0 +1,90 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+% Other packages for formatting
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=1cm, scale=1]{geometry}
+\definecolor{371e77}{HTML}{371E77}
+
+% Tabularx environment
+\usepackage{tabularx}
+
+% For lists
+\usepackage{enumitem}
+
+% Centered version of 'X' column
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+% Custom section formatting
+\usepackage{titlesec}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{2pt}{2pt}
+
+% Hyperlinks
+\usepackage[unicode]{hyperref}
+\usepackage[normalem]{ulem}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=., 
+    urlcolor=.,
+    citecolor=black
+}
+\newcommand{\ulhref}[2]{\href{#1}{\uline{#2}}}
+
+% Social icons
+\usepackage{fontawesome5}
+
+\setmainfont{Arial} 
+
+\begin{document}
+\pagestyle{empty} % no page numbers
+
+% ==================== Header ====================
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C}\Huge{\textbf{SANJANA RANI}} \\
+\color[HTML]{371E77}\large{Graduate Aerospace Engineer | Aerodynamics • Acoustics • Experimental Testing • Data Analysis} \\
+\textcolor[HTML]{371E77}{
+  \raisebox{-0.2\height}{\includegraphics[height=12pt]{mail.png}} \, sanjanakamboj98@gmail.com \, | \,
+  \raisebox{-0.2\height}{\includegraphics[height=12pt]{phone.png}} \, +49(0)15251347327 \, | \,
+    \raisebox{-0.2\height}{\includegraphics[height=12pt]{linkedin.png}} \, 
+\ulhref{https://linkedin.com/in/sanjana-rani}{linkedin.com/in/sanjana-rani}
+}
+\end{tabularx}
+
+\vspace{0.5cm}
+
+% ==================== Date & Recipient ====================
+\noindent
+\textbf{Date:} \today \\
+
+German Aerospace Center (DLR)\\
+Recruitment Team\\
+Cochstedt, Germany\\
+
+% ==================== Subject ====================
+\noindent
+\textbf{Subject: Application for Research Associate --- Aircraft Noise from Advanced Air Mobility (Ref.\ No.\ 4364)}\\
+
+Dear Hiring Team,\\
+
+I am writing to apply for the Research Associate position in Aircraft Noise from Advanced Air Mobility (Ref. No. 4364) at the Institute of Aerodynamics and Flow Technology in Cochstedt. I hold a Joint Master’s degree in Transfer of Fluid Materials in Aeronautical \& Space Applications (TFM-ASA) and have gained hands-on experience in aeroacoustic measurements, experimental aerodynamics, and Python-based signal processing through my work at DLR and university laboratories. Having contributed to acoustic sensor validation within DLR, I am motivated to extend this experience towards aircraft noise modelling, simulation benchmarking, and advanced air mobility research.\\
+
+During my Graduate Research Assistantship at the DLR Institute of Electrified Aero Engines, I contributed to the development and experimental validation of acoustic and vibroacoustic sensor systems for EMC/EMI testing under the LU(FT)\(^2\) 2030 project, including building a prototype EMI testing rig at the Braunschweig facility. I monitored time-based signals using DEWESoft and designed 
+Python-based signal processing pipelines --- FFT, coherence analysis, and spectral subtraction --- to evaluate sensor sensitivity and noise susceptibility across 2 microphone types and 4 spatial configurations over a 0--50\,kHz frequency range. I also performed cross-modal comparisons of accelerometer and microphone magnitude spectra to characterise near-field and far-field noise behaviour and quantify measurement uncertainty. This work gave me end-to-end experience with acoustic measurement campaigns --- from rig design and data acquisition through to signal processing and uncertainty analysis.\\
+
+Prior to DLR, as a Student Assistant at the Chair of Aerodynamics and Fluid Mechanics at BTU Cottbus, I supported the TEKUS/DEPIK zero-gravity convection experiment, contributing to mechanical assembly, experimental integration, flow-quality validation, and PIV-based flow analysis. Alongside my professional experience, my Joint MSc provided strong foundations in experimental aerodynamics 
+and flow measurement techniques, complemented by project work spanning stereo-PIV flow analysis, reduced-order aerodynamic modelling in Python, and hands-on acoustic measurement --- including an SPL survey of a running compressor to characterise near-field noise distribution at varying heights. These experiences across experimental and computational workflows have strengthened my ability to independently analyse complex data while contributing effectively within collaborative research teams.\\
+
+This position represents an opportunity to build directly on my experimental and signal processing background in a research environment I already know and respect. I am drawn to DLR's work on Advanced Air Mobility noise not only because it connects to my previous acoustic measurement experience, but because it sits at the intersection of a genuinely open scientific problem and a rapidly evolving field. I am eager to contribute to flight test campaigns and simulation benchmarking at Cochstedt, and to develop deeper expertise in noise source modelling and immission prediction methods. Longer term, I am motivated to grow as an independent researcher --- publishing results, collaborating with project partners, and contributing to DLR's position at the forefront of aeroacoustics research.\\
+
+I am aware that the role requires strong German language skills. My current level is A1, and I am actively improving, with the goal of reaching B1 by the end of 2026. I am confident in my ability to work effectively in English in international research environments and committed to further developing my German alongside my work. I would welcome the opportunity to discuss my application further and am available for an interview at your convenience. Thank you for considering my application.\\
+
+Sincerely,\\
+\textbf{Sanjana Rani}
+
+\end{document}
