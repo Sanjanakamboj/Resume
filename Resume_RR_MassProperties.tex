@@ -1,0 +1,656 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip}
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\usepackage{graphicx}
+
+\RequirePackage{color}
+% \RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[left=0.8cm, right=0.8cm, top=0.7cm, bottom=0.7cm, scale=1]{geometry}
+\definecolor{371e77}{HTML}{371E77}
+
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+
+%tabularx environment
+\usepackage{tabularx}
+\usepackage[most]{tcolorbox}
+
+%for lists within the experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}p}
+\newtcolorbox{summarybox}{
+  colback=white,
+  colframe=371e77,
+  boxrule=0.8pt,
+  arc=2pt,
+  left=6pt,
+  right=6pt,
+  top=5pt,
+  bottom=5pt
+}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\vspace{1pt}\titlerule\vspace{1pt}]
+\titlespacing{\section}{0pt}{10pt}{4pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+\definecolor{myPurple}{HTML}{371e77}
+
+\usepackage[unicode]{hyperref}
+\usepackage[normalem]{ulem} % for \uline
+
+% No forced hyperlink color:
+\hypersetup{
+    colorlinks=true,
+    linkcolor=.,   % inherit surrounding color
+    urlcolor=.,    % inherit surrounding color
+    citecolor=black
+}
+
+\newcommand{\ulhref}[2]{%
+  {\hypersetup{urlcolor=.}\textcolor{.}{\href{#1}{\uline{#2}}}}%
+}
+
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+% \usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+
+%============================================================
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+% ---------- Name ----------
+\color[HTML]{1C033C}\Huge{\textbf{SANJANA RANI}} \\[0.4cm]
+
+% ---------- Designation ----------
+\color[HTML]{371e77}\large{\textit{Aerospace Engineer | Mass Properties, CAD \& Data Analysis | Python
+}}\\[0.6cm]
+
+% ---------- Contact Information ----------
+\small\textcolor[HTML]{371e77}{
+  \raisebox{-0.2\height}{\includegraphics[height=9pt]{phone.png}}\,+91-9996673079\,|\,
+  \raisebox{-0.2\height}{\includegraphics[height=9pt]{mail.png}}\,sanjanakamboj98@gmail.com\,|\,
+    \raisebox{-0.2\height}{\includegraphics[height=9pt]{linkedin.png}}\,\ulhref{https://linkedin.com/in/sanjana-rani}{linkedin.com/in/sanjana-rani}\,|\,
+    \raisebox{-0.2\height}{\includegraphics[height=9pt]{github.png}}\,\ulhref{https://github.com/Sanjanakamboj}{github.com/Sanjanakamboj}}\normalsize\\
+
+
+\end{tabularx}
+
+% ---------- Professional Summary ----------
+\begin{summarybox}
+{\bfseries\color[HTML]{371e77}PROFESSIONAL SUMMARY}\\
+Aerospace engineer with a joint international MSc (France, Belgium, Germany), strong in CAD (SolidWorks, CATIA,
+Creo) and structured Python-based data analysis and reporting. Background spans CFD, experimental aerodynamics,
+and self-directed engineering-mechanics projects, with a consistent habit of verifying every result against an
+independent method before trusting it. Quick to pick up new tools and domains as a task requires.
+\end{summarybox}
+
+% ===== ACTIVE: RR Dahlewitz -- Mass Properties Management =====
+\section{Key Skills}
+\color[HTML]{371e77}\textbf{CAD \& Geometry Definition:} \color[HTML]{000000}SolidWorks, CATIA, Creo -- Component Modeling
+\normalcolor\\
+\color[HTML]{371e77}\textbf{Programming \& Data Analysis:} \color[HTML]{000000}Python (NumPy, SciPy, Pandas, Matplotlib), MATLAB, MS Office (Excel), Notion (Certified: Advanced), Git/GitHub, Structured Reporting \& Data Quality Checks
+\normalcolor\\
+\color[HTML]{371e77}\textbf{CFD \& Simulation:} \color[HTML]{000000}OpenFOAM, ANSYS Fluent, SU2, XFOIL, GMSH, ParaView
+\normalcolor\\
+\color[HTML]{371e77}\textbf{Turbomachinery \& Propulsion:} \color[HTML]{000000}Mean-Line Design, Blade Geometry (ParaBlade), Cascade CFD
+\normalcolor\\
+\color[HTML]{371e77}\textbf{Experimental Test Campaigns:} \color[HTML]{000000}Wind-Tunnel \& Water-Channel Testing, Test-Rig Design \& Assembly, Instrumentation, DAQ (DEWESoft), PIV
+\normalcolor\\
+\color[HTML]{371e77}\textbf{Languages:} \color[HTML]{000000}English (Fluent), French (Beginner), German (A1, improving)
+\normalcolor
+% ===== END ACTIVE: RR Dahlewitz -- Mass Properties Management =====
+
+%----------Experience----------
+\section{Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Freelance CFD Engineer} \hfill \color[HTML]{371e77} \textit{Mar 2026 -- Present} \\[1pt]
+\color[HTML]{371e77}\textbf{CFD \& Technical Task Development for AI Model Training}\ \hfill \color[HTML]{4B28A4} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item Build and code well-defined technical problems with genuine reference solutions and correctness verifiers for AI model-training platforms, primarily in CFD/OpenFOAM and mechanical engineering domains.
+        \item Deliver against reviewer-graded quality standards across multiple contracted platforms, iterating on structured feedback; numerous tasks accepted to date.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{\ulhref{https://www.dlr.de/}{DLR Institute of Electrified Aero Engines (DLR e.V.)}}, Cottbus, Germany} \hfill \color[HTML]{371e77} \textit{Feb 2024 - Sep 2024} \\[1pt]
+\color[HTML]{371e77}\textbf{Graduate Research Assistant}\ \hfill \color[HTML]{4B28A4} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item Conducted a literature review of electric propulsion systems for UAV/eVTOL applications to select an appropriately rated electric motor for the experimental test setup.
+        \item Collaborated cross-functionally to configure and test a multi-sensor instrumentation array across four spatial positions using DEWESoft DAQ, assessing electric motor-induced EMI effects on microphones and accelerometers for next-generation \ulhref{https://www.dlr.de/en/as/research-and-transfer/projects/lu-ft-2-2030-effective-and-sustainable-noise-reduction-on-existing-aircraft}{LU(FT)\(^2\) 2030} eVTOL propulsion.
+        \item Generated and processed a multi-microphone acoustic dataset (8 microphones across 6 varied experimental parameters) via a Python pipeline (FFT, coherence, magnitude spectra), analyzing coherence between acoustic and vibration (accelerometer) signals during motor operation -- an aeroacoustics/vibroacoustics diagnostic approach -- for master's thesis.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{\ulhref{https://www.b-tu.de/fg-aerodynamik-stroemungslehre}{Chair of Aerodynamics and Fluid Mechanics, BTU}}, Cottbus, Germany} \hfill \color[HTML]{371e77} \textit{Aug 2023 – Feb 2024}\\[1pt]
+\color[HTML]{371e77}\textbf{Student Assistant}\ \hfill \color[HTML]{4B28A4}  \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item Conducted PIV and flow visualisation to characterize flow regimes (laminar, transitional, turbulent) across trial configurations; confirmed laminar flow achievement in final design and produced structured validation reports for department records.
+        \item Designed and iteratively refined a cylindrical plate geometry in Creo -- trial-and-error against target laminar-flow geometry constraints, across 3 configurations -- then solely assembled the resulting experimental prototype rig (piping, optical/electrical components, laser/camera) for the \ulhref{https://www.b-tu.de/en/news/article/27186-weightless-research-btu-team-investigates-convection-currents-in-free-fall}{TEKUS / DEPIK} zero-gravity convection project.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\ulhref{https://www.simulationlab.in/}{Simulation Lab}} \hfill \color[HTML]{371e77} \textit{May 2023 -- Jul 2023}\\[1pt]
+\color[HTML]{371e77}\textbf{Aerodynamics Intern (Freelance)}\ \hfill \color[HTML]{4B28A4}  \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item Ran an 80-case ANSYS Fluent CFD sweep on a provided airfoil geometry (4 angles of attack \(\times\) 20 deflection angles), computing lift/drag coefficients (C\textsubscript{L}/C\textsubscript{D}) to characterize AoA and deflection-angle effects on aerodynamic performance.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+%---------- Education----------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Joint MSc in \ulhref{https://tfmasa.eu/}{Transfer of Fluid Materials in Aeronautical \& Space Applications (TFM-ASA)}} \hfill \color[HTML]{371e77} \textit{Sep 2022 - Sep 2024}
+\newline
+\color[HTML]{371e77}\textbf{\ulhref{https://www.u-bordeaux.fr/}{Université de Bordeaux} (Bordeaux, France) \ulhref{https://www.uclouvain.be/fr}{Université Catholique de Louvain} (Louvain-la-Neuve, Belgium) \ulhref{https://www.b-tu.de/en/}{Brandenburgische Technische Universität} (Cottbus, Germany)}\ \hfill \color[HTML]{4B28A4}  \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item \textbf{Thesis:} Electromagnetic Interference and its effects on Acoustic Sensor measurements
+        \item \textbf{Selected Coursework:} Aerodynamics of External Flows, Gasdynamics \& Reacting Flows, Introduction to Turbomachinery, Experiments in Aerodynamics \& Fluid Mechanics, Flow Measurements
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{B.E. in Aerospace Engineering} \hfill \color[HTML]{371e77} \textit{Aug 2018 - Jun 2022}
+\newline
+\color[HTML]{371e77}\textbf{\ulhref{https://www.cuchd.in/engineering/be-aerospace.php?L_mx_Visit_Source=www.cuchd.in/}{Chandigarh University}, Gharaun, India}\ \hfill \color[HTML]{4B28A4}  \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item \textbf{Core Coursework:} Aerodynamics I \& II, Aerothermodynamics, Propulsion, Wind Tunnel Testing, Flight Mechanics, Aircraft stability \& control, Computational Fluid Dynamics
+        \item \textbf{Final Project:} CFD Analysis of a hypersonic nozzle using ANSYS Fluent
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% %----------Skills----------
+% ===== MASTER (all jobs) -- commented out per resume-tailoring-workflow, do not delete =====
+% \section{Key Skills}
+% \color[HTML]{371e77}\textbf{CFD \& Simulation:} \color[HTML]{000000}OpenFOAM, ANSYS Fluent, SU2, XFOIL, GMSH, ParaView, Turbulence Modeling (RANS: k-$\omega$ SST, k-$\varepsilon$)
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Analytical \& Classical Aerodynamics:} \color[HTML]{000000}Thin-Airfoil Theory, Vortex Panel Methods, Prandtl Lifting-Line Theory, Potential Flow
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{CAD:} \color[HTML]{000000}SolidWorks, CATIA, Creo
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Experimental Test Campaigns:} \color[HTML]{000000}Wind-Tunnel \& Water-Channel Testing, Test-Rig Design \& Assembly, Instrumentation, DAQ (DEWESoft), PIV
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Turbomachinery \& Propulsion:} \color[HTML]{000000}Mean-Line Design, Blade Geometry (ParaBlade), Cascade CFD, Brayton-Cycle Analysis
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Programming \& Software Tools:} \color[HTML]{000000}Python (NumPy, SciPy, Pandas, Matplotlib), MATLAB, Git/GitHub, Docker, LaTeX, MCP (Model Context Protocol) Server Development
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Data \& Signal Processing:} \color[HTML]{000000}FFT, Coherence Analysis, PSD/Spectrogram Analysis, Digital Filtering, Machine Learning Fundamentals
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Other:} \color[HTML]{000000}Orbital Mechanics \& Mission Design, AI-Assisted Engineering Workflows (Claude Code)
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Languages:} \color[HTML]{000000}English (Fluent), French (Beginner), German (A1, improving)
+% \normalcolor
+% ===== END MASTER =====
+
+% ===== SAVED: Harmattan AI -- Aerodynamic Engineer (Lausanne) -- commented for reuse =====
+% \section{Key Skills}
+% \color[HTML]{371e77}\textbf{CFD \& Simulation:} \color[HTML]{000000}OpenFOAM, ANSYS Fluent, SU2, XFOIL, GMSH, ParaView
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Flight Dynamics \& Stability:} \color[HTML]{000000}6DOF Equations of Motion, Stability Derivatives, PID Autopilot Design
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{CAD:} \color[HTML]{000000}SolidWorks, CATIA, Creo
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Experimental Test Campaigns:} \color[HTML]{000000}Wind-Tunnel \& Water-Channel Testing, Test-Rig Design \& Assembly, Instrumentation, DAQ (DEWESoft), PIV
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Programming \& Software Tools:} \color[HTML]{000000}Python (NumPy, SciPy, Pandas, Matplotlib), MATLAB, Git/GitHub
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Languages:} \color[HTML]{000000}English (Fluent), French (Beginner), German (A1, improving)
+% \normalcolor
+% ===== END SAVED: Harmattan AI =====
+
+% ===== SAVED: Generalized -- AI Training / Benchmark-Authoring Jobs -- commented for reuse =====
+% \section{Key Skills}
+% \color[HTML]{371e77}\textbf{CFD \& Simulation:} \color[HTML]{000000}OpenFOAM, ANSYS Fluent, SU2, XFOIL, GMSH, ParaView, Turbulence Modeling (RANS: k-$\omega$ SST, k-$\varepsilon$)
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Analytical \& Classical Aerodynamics:} \color[HTML]{000000}Thin-Airfoil Theory, Vortex Panel Methods, Prandtl Lifting-Line Theory, Potential Flow
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Turbomachinery \& Propulsion:} \color[HTML]{000000}Mean-Line Design, Blade Geometry (ParaBlade), Cascade CFD, Brayton-Cycle Analysis
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Experimental Test Campaigns:} \color[HTML]{000000}Wind-Tunnel \& Water-Channel Testing, Test-Rig Design \& Assembly, Instrumentation, DAQ (DEWESoft), PIV
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Programming \& Software Tools:} \color[HTML]{000000}Python (NumPy, SciPy, Pandas, Matplotlib), MATLAB, Git/GitHub, Docker, LaTeX
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Data \& Signal Processing:} \color[HTML]{000000}FFT, Coherence Analysis, PSD/Spectrogram Analysis, Digital Filtering, Machine Learning Fundamentals
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{AI Tooling \& Task Authoring:} \color[HTML]{000000}MCP (Model Context Protocol) Server Development, AI-Assisted Engineering Workflows (Claude Code), Technical Problem Formulation \& Reference-Solution Writing
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Other:} \color[HTML]{000000}Orbital Mechanics \& Mission Design
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Languages:} \color[HTML]{000000}English (Fluent), French (Beginner), German (A1, improving)
+% \normalcolor
+% ===== END SAVED: Generalized =====
+
+% ===== SAVED: micro1 -- Mechanical Design / CAD Expert (AI Training) -- commented for reuse =====
+% \section{Key Skills}
+% \color[HTML]{371e77}\textbf{CAD \& Mechanical Design:} \color[HTML]{000000}SolidWorks, CATIA, Creo, AutoCAD -- Component \& Assembly Modeling, Fit Tolerancing \& GD\&T, Geometric Modeling, Iterative Design Against Physical/Engineering Constraints
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Hardware Realization:} \color[HTML]{000000}Design-to-Build Cross-Checking, Test-Rig Design, Fabrication \& Assembly (Piping, Optical/Electrical Components), Prototype Validation
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Turbomachinery \& Propulsion Design:} \color[HTML]{000000}Mean-Line Design, 3D Blade Geometry (ParaBlade), Cascade CFD, Brayton-Cycle Analysis
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Experimental Test Campaigns:} \color[HTML]{000000}Wind-Tunnel \& Water-Channel Testing, Instrumentation, DAQ (DEWESoft), PIV
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{CFD \& Simulation:} \color[HTML]{000000}OpenFOAM, ANSYS Fluent, SU2, XFOIL, GMSH, ParaView
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Programming \& Software Tools:} \color[HTML]{000000}Python (NumPy, SciPy, Pandas, Matplotlib), MATLAB, Git/GitHub, Docker, LaTeX
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{AI Tooling \& Task Authoring:} \color[HTML]{000000}Technical Problem Formulation \& Reference-Solution Writing, Reviewer-Graded Task Delivery for AI Model-Training Platforms
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Languages:} \color[HTML]{000000}English (Fluent), French (Beginner), German (A1, improving)
+% \normalcolor
+% ===== END SAVED: micro1 =====
+
+%---------- Courses & Certifications----------
+% Merged into the "Certifications, Training & Competitions" section near the
+% end of the document (with Selected Projects/Hackathons) for the current
+% aerospace/CFD/aerodynamics profile -- kept here too as the reusable archive.
+% ===== SAVED: Generalized -- AI Training / Benchmark-Authoring Jobs -- commented for reuse =====
+% \section{Courses \& Certifications}
+% \color[HTML]{371e77}\textbf{Machine Learning with AI} \color[HTML]{000000}-- Internshala -- \textit{Jun 2026}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Git \& GitHub} \color[HTML]{000000}-- Internshala -- \textit{May -- Jun 2026}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Claude Code 101} \color[HTML]{000000}-- Anthropic -- \textit{Jun 2026}
+% \normalcolor
+% ===== END SAVED: Generalized =====
+
+% ===== SAVED: micro1 -- Mechanical Design / CAD Expert (AI Training) -- commented for reuse =====
+% \section{Courses \& Certifications}
+% \color[HTML]{371e77}\textbf{CATIA} \color[HTML]{000000}-- Internshala -- \textit{May 2021}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{SOLIDWORKS} \color[HTML]{000000}-- Internshala -- \textit{Jun 2020}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Ansys} \color[HTML]{000000}-- Internshala -- \textit{May 2021}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{AutoCAD with AI} \color[HTML]{000000}-- Internshala -- \textit{Jun 2020}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{MATLAB} \color[HTML]{000000}-- Internshala -- \textit{Mar 2025}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Claude Code 101} \color[HTML]{000000}-- Anthropic -- \textit{Jun 2026}
+% \normalcolor
+% ===== END SAVED: micro1 =====
+
+% %---------- Projects----------
+% ===== MASTER (all jobs) -- commented out per resume-tailoring-workflow, do not delete =====
+% \section{Selected Projects}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Aerodynamics/tree/main/Airfoil\%20Design\%20\%26\%20Analysis}{Airfoil Design \& Analysis — Low-to-High-Fidelity Pipeline}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Aug 2025 -- Feb 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built a Python pipeline connecting airfoil geometry generation (NACA 4/5-digit, .dat import) with aerodynamic analysis via a custom XFOIL subprocess wrapper -- including fixing a real XFOIL filename-truncation bug -- automating polar sweeps and C\textsubscript{p} distributions for NACA 0012, NACA 2412, and NASA SC(2)-0714.
+%         \item Used this pipeline to validate a higher-fidelity study: a custom y\textsuperscript{+}-targeted C-mesh (GMSH) and OpenFOAM k-$\omega$ SST RANS simulation of a NACA0012 airfoil, cross-checking the resulting surface-pressure (C\textsubscript{p}) distribution against the XFOIL result.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Water-Channel PIV Study — Airfoil \& Cylinder — } \color[HTML]{371e77}\textbf{BTU Cottbus} \hfill \textit{Aug 2023 -- Feb 2024}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Conducted water-channel flow visualization and stereoPIV (PIVlab) on airfoil and cylinder models, using tracer particles and laser-sheet illumination to extract quantitative streamline and velocity fields.
+%         \item Used the water channel's variable flow speed to compute C\textsubscript{l}, C\textsubscript{d}, and C\textsubscript{p} across both geometries.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Wind-Tunnel Airfoil Testing — } \color[HTML]{371e77}\textbf{Université Catholique de Louvain \& BTU Cottbus} \hfill \textit{2022 -- 2024}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item At UCLouvain: smoke-tuft flow visualization and a surface pressure-tap array to measure C\textsubscript{p} distribution (suction/pressure side, 2 angles of attack).
+%         \item At BTU Cottbus: repeated the campaign across 3 flow speeds at a fixed AoA, computing full C\textsubscript{l}/C\textsubscript{d}/C\textsubscript{p} using tracer-particle and laser flow diagnostics.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Aerodynamics/tree/main/Formation\%20Flight}{Formation Flight — Prandtl Lifting-Line Study}} — \color[HTML]{371e77}\textbf{Université Catholique de Louvain} \hfill \textit{2022 -- 2023}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Modeled two-aircraft formation flight (A320 leader/trailer) using Prandtl lifting-line theory (the same vortex-lattice/lifting-line family AVL implements), quantifying the induced-drag benefit of the trailer surfing the leader's rolled-up wake.
+%         \item Trimmed the resulting rolling moment via antisymmetric aileron deflection, achieving a $\approx$5\% net drag reduction for the trimmed trailer.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/CFD/tree/main/Flow\%20past\%20cylinder}{Flow Past a Cylinder — From-First-Principles CFD Study}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Aug 2025 -- Feb 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built the full research pipeline from physics through validation: analytical Reynolds-regime derivation, a from-scratch Python Navier-Stokes solver, then an OpenFOAM study (Re = 10--1000) with a 3-level mesh-independence check.
+%         \item Automated case generation and force/FFT extraction (Python) across the Reynolds sweep, building the pipeline to benchmark Strouhal number and drag coefficient against published literature.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Aerodynamics/tree/main/Thin\%20Airfoil\%20Theory}{Thin Airfoil Theory}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Implemented Glauert's thin-airfoil theory (Fourier-series camber-line solution) for the NACA 2412 airfoil, plus a linear-strength vortex panel method as an independent cross-check.
+%         \item Validated both methods against textbook zero-lift angle of attack and quarter-chord moment coefficient.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/turbine-stage-design}{Gas Turbine Design Toolkit}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jun -- Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built an axial-turbine stage-design chain: 1D mean-line design (stations, velocity triangles, annulus geometry) \(\rightarrow\) rotor-blade geometry \(\rightarrow\) airfoil generation (ParaBlade) \(\rightarrow\) cascade CFD (GMSH mesh generation, SU2 RANS solver, automated post-processing).
+%         \item Exposed the turbine design chain as an MCP server, making the mean-line/blade-geometry/CFD tools directly callable from an AI coding agent.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/space-mission-design-toolkit}{Space Mission Design Toolkit}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built an orbital mechanics and mission-analysis toolkit (state vectors \(\leftrightarrow\) orbital elements, Hohmann/bi-elliptic/plane-change maneuvers, J2/drag/solar-radiation-pressure perturbations, mission optimization), validating every result against analytical solutions or published benchmarks.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Acoustics}{Underwater Acoustic Signal Processing}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Processed a hydrophone recording of underwater boat noise end-to-end in Python: calibrated raw counts to pressure, computed broadband L\textsubscript{eq} and Welch PSD/spectrogram/1/3-octave band levels, and isolated boat-machinery tonal frequencies from a dominant low-frequency artifact via a zero-phase Butterworth bandpass filter.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/MCP}{MCP Servers -- AI Tool Integrations}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jun -- Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built and published a small collection of MCP (Model Context Protocol) servers exposing engineering tools -- LaTeX report generation and an XFOIL airfoil-analysis wrapper -- as callable tools for AI coding agents.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Flight-Mechanics}{6DOF Flight Simulator}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built a from-scratch 6-degree-of-freedom nonlinear flight-dynamics simulator in Python (atmosphere, aerodynamics, propulsion, equations of motion) for a Cessna-172-class aircraft, using representative published stability derivatives.
+%         \item Implemented a cascaded-PID autopilot and a live, keyboard-flyable 3D visualization with a real-time HUD.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+% ===== END MASTER =====
+
+% ===== SAVED: Harmattan AI -- Aerodynamic Engineer (Lausanne) -- commented for reuse =====
+% \section{Selected Projects}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Aerodynamics/tree/main/Airfoil\%20Design\%20\%26\%20Analysis}{Airfoil Design \& Analysis — Low-to-High-Fidelity Pipeline}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Aug 2025 -- Feb 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built a Python pipeline connecting airfoil geometry generation (NACA 4/5-digit, .dat import) with aerodynamic analysis via a custom XFOIL subprocess wrapper -- including fixing a real XFOIL filename-truncation bug -- automating polar sweeps and C\textsubscript{p} distributions for NACA 0012, NACA 2412, and NASA SC(2)-0714.
+%         \item Used this pipeline to validate a higher-fidelity study: a custom y\textsuperscript{+}-targeted C-mesh (GMSH) and OpenFOAM k-$\omega$ SST RANS simulation of a NACA0012 airfoil, cross-checking the resulting surface-pressure (C\textsubscript{p}) distribution against the XFOIL result.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Flight-Mechanics}{6DOF Flight Simulator}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built a from-scratch 6-degree-of-freedom nonlinear flight-dynamics simulator in Python (atmosphere, aerodynamics, propulsion, equations of motion) for a Cessna-172-class aircraft, using representative published stability derivatives.
+%         \item Implemented a cascaded-PID autopilot and a live, keyboard-flyable 3D visualization with a real-time HUD.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Wind-Tunnel Airfoil Testing — } \color[HTML]{371e77}\textbf{Université Catholique de Louvain \& BTU Cottbus} \hfill \textit{2022 -- 2024}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item At UCLouvain: smoke-tuft flow visualization and a surface pressure-tap array to measure C\textsubscript{p} distribution (suction/pressure side, 2 angles of attack).
+%         \item At BTU Cottbus: repeated the campaign across 3 flow speeds at a fixed AoA, computing full C\textsubscript{l}/C\textsubscript{d}/C\textsubscript{p} using tracer-particle and laser flow diagnostics.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Water-Channel PIV Study — Airfoil \& Cylinder — } \color[HTML]{371e77}\textbf{BTU Cottbus} \hfill \textit{Aug 2023 -- Feb 2024}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Conducted water-channel flow visualization and stereoPIV (PIVlab) on airfoil and cylinder models, using tracer particles and laser-sheet illumination to extract quantitative streamline and velocity fields.
+%         \item Used the water channel's variable flow speed to compute C\textsubscript{l}, C\textsubscript{d}, and C\textsubscript{p} across both geometries.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Aerodynamics/tree/main/Formation\%20Flight}{Formation Flight — Prandtl Lifting-Line Study}} — \color[HTML]{371e77}\textbf{Université Catholique de Louvain} \hfill \textit{2022 -- 2023}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Modeled two-aircraft formation flight (A320 leader/trailer) using Prandtl lifting-line theory (the same vortex-lattice/lifting-line family AVL implements), quantifying the induced-drag benefit of the trailer surfing the leader's rolled-up wake.
+%         \item Trimmed the resulting rolling moment via antisymmetric aileron deflection, achieving a $\approx$5\% net drag reduction for the trimmed trailer.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Aerodynamics/tree/main/Thin\%20Airfoil\%20Theory}{Thin Airfoil Theory}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Implemented Glauert's thin-airfoil theory (Fourier-series camber-line solution) for the NACA 2412 airfoil, plus a linear-strength vortex panel method as an independent cross-check.
+%         \item Validated both methods against textbook zero-lift angle of attack and quarter-chord moment coefficient.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/CFD/tree/main/Flow\%20past\%20cylinder}{Flow Past a Cylinder — From-First-Principles CFD Study}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Aug 2025 -- Feb 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built the full research pipeline from physics through validation: analytical Reynolds-regime derivation, a from-scratch Python Navier-Stokes solver, then an OpenFOAM study (Re = 10--1000) with a 3-level mesh-independence check.
+%         \item Automated case generation and force/FFT extraction (Python) across the Reynolds sweep, building the pipeline to benchmark Strouhal number and drag coefficient against published literature.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/turbine-stage-design}{Gas Turbine Design Toolkit}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jun -- Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built an axial-turbine stage-design chain: 1D mean-line design (stations, velocity triangles, annulus geometry) \(\rightarrow\) rotor-blade geometry \(\rightarrow\) airfoil generation (ParaBlade) \(\rightarrow\) cascade CFD (GMSH mesh generation, SU2 RANS solver, automated post-processing).
+%         \item Exposed the turbine design chain as an MCP server, making the mean-line/blade-geometry/CFD tools directly callable from an AI coding agent.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+% ===== END SAVED: Harmattan AI =====
+
+% ===== SAVED: Generalized -- AI Training / Benchmark-Authoring Jobs -- commented for reuse =====
+% Full breadth kept active here on purpose: these roles value cross-domain
+% technical range (not just aero) plus visible AI-tooling fluency.
+% \section{Selected Projects}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Aerodynamics/tree/main/Airfoil\%20Design\%20\%26\%20Analysis}{Airfoil Design \& Analysis — Low-to-High-Fidelity Pipeline}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Aug 2025 -- Feb 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built a Python pipeline connecting airfoil geometry generation (NACA 4/5-digit, .dat import) with aerodynamic analysis via a custom XFOIL subprocess wrapper -- including fixing a real XFOIL filename-truncation bug -- automating polar sweeps and C\textsubscript{p} distributions for NACA 0012, NACA 2412, and NASA SC(2)-0714.
+%         \item Used this pipeline to validate a higher-fidelity study: a custom y\textsuperscript{+}-targeted C-mesh (GMSH) and OpenFOAM k-$\omega$ SST RANS simulation of a NACA0012 airfoil, cross-checking the resulting surface-pressure (C\textsubscript{p}) distribution against the XFOIL result.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/turbine-stage-design}{Gas Turbine Design Toolkit}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jun -- Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built an axial-turbine stage-design chain: 1D mean-line design (stations, velocity triangles, annulus geometry) \(\rightarrow\) rotor-blade geometry \(\rightarrow\) airfoil generation (ParaBlade) \(\rightarrow\) cascade CFD (GMSH mesh generation, SU2 RANS solver, automated post-processing).
+%         \item Exposed the turbine design chain as an MCP server, making the mean-line/blade-geometry/CFD tools directly callable from an AI coding agent.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/MCP}{MCP Servers -- AI Tool Integrations}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jun -- Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built and published a small collection of MCP (Model Context Protocol) servers exposing engineering tools -- LaTeX report generation and an XFOIL airfoil-analysis wrapper -- as callable tools for AI coding agents.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+% ===== END SAVED: Generalized =====
+
+% ===== SAVED: micro1 -- Mechanical Design / CAD Expert (AI Training) -- commented for reuse =====
+% \section{Selected Projects}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Water-Channel PIV Study — Airfoil \& Cylinder — } \color[HTML]{371e77}\textbf{BTU Cottbus} \hfill \textit{Aug 2023 -- Feb 2024}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Designed and iteratively refined a cylindrical plate geometry in Creo -- trial-and-error against target laminar-flow constraints, across 3 configurations -- then assembled it in CAD with existing piping, optical, and electrical component models (tolerances set by the supervising team, with some intuition-based input from me) and fabricated and physically assembled the resulting experimental prototype rig (laser/camera included).
+%         \item Conducted stereoPIV and flow visualization on the built hardware to confirm the design met its laminar-flow target, producing structured validation reports comparing as-built performance against design intent.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/turbine-stage-design}{Gas Turbine Design Toolkit}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Jun -- Jul 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built an axial-turbine stage-design chain: 1D mean-line design (stations, velocity triangles, annulus geometry) \(\rightarrow\) rotor-blade geometry \(\rightarrow\) airfoil generation (ParaBlade) \(\rightarrow\) cascade CFD (GMSH mesh generation, SU2 RANS solver, automated post-processing).
+%         \item Practiced end-to-end geometric design reasoning: translating aero/mechanical requirements into parametric 3D blade geometry, then verifying the design against simulation before accepting it.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+%
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{\ulhref{https://github.com/Sanjanakamboj/Aerodynamics/tree/main/Airfoil\%20Design\%20\%26\%20Analysis}{Airfoil Design \& Analysis — Low-to-High-Fidelity Pipeline}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Aug 2025 -- Feb 2026}\\[1pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+%         \item Built a Python pipeline connecting parametric geometry generation (NACA 4/5-digit, .dat import) with aerodynamic analysis via a custom XFOIL subprocess wrapper, automating polar sweeps and C\textsubscript{p} distributions for NACA 0012, NACA 2412, and NASA SC(2)-0714.
+%         \item Cross-checked the resulting surface-pressure distribution from a custom-meshed (GMSH) OpenFOAM RANS simulation against the lower-fidelity XFOIL result -- independent-method validation of the same geometry.
+%     \end{itemize}
+% \end{minipage}
+% \end{tabularx}
+% ===== END SAVED: micro1 =====
+
+% ===== ACTIVE: RR Dahlewitz -- Mass Properties Management =====
+\section{Selected Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\ulhref{https://github.com/Sanjanakamboj/composite-fuselage-laminate-analysis}{Composite Fuselage Laminate Analysis}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Aug 2026}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item Built a Classical Lamination Theory toolkit: lamina/laminate stiffness matrices, ply-level stress/strain recovery, and failure assessment against three criteria (Maximum Stress, Tsai-Hill, Tsai-Wu) for fuselage-skin loading, with a design-space search finding a 25\% mass reduction under a minimum-gauge constraint.
+        \item Verified every mechanics stage against an independent derivation (166 automated tests) and explicitly labeled loads/strength data as illustrative, preliminary-design-level -- not certified for production use.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\ulhref{https://github.com/Sanjanakamboj/propellant-tank-wall-sizing}{Propellant Tank Wall Sizing}} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Aug 2026}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item Compared aluminum (Al 2219-T87), titanium (Ti-6Al-4V), and carbon/epoxy composite for a cylindrical propellant-tank wall with hemispherical domes under internal pressure: thin-wall membrane sizing for the metals, a from-scratch Classical Lamination Theory implementation (three failure criteria, bounded deterministic laminate search) for the composite.
+        \item Found titanium and the composite effectively mass-equivalent (43.95 kg vs. 43.98 kg, 0.08\% difference) while aluminum was 45\% heavier under the same idealized model -- verified by 324 automated tests.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Wing-Planform Design} — \color[HTML]{371e77}\textbf{Self-directed} \hfill \textit{Aug 2026}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item Designed two materially distinct trapezoidal wing-planform concepts (steady-cruise and passive-gust-relief) for a regional-aircraft mission, trading aspect ratio, sweep, taper, twist, dihedral, and torsional stiffness against rigid/flexible aerodynamic efficiency, stall, bending, and structural-mass constraints.
+        \item Built the deterministic verification referee around a 9-term Prandtl lifting-line method, checking each concept's rigid and aeroelastic (flexible-wing) response and as-built-tolerance robustness across 256 corner-case geometry perturbations per concept.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Water-Channel PIV Study — Airfoil \& Cylinder — } \color[HTML]{371e77}\textbf{BTU Cottbus} \hfill \textit{Aug 2023 -- Feb 2024}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item Designed and iteratively refined a cylindrical plate geometry in Creo -- trial-and-error against target laminar-flow constraints, across 3 configurations -- then assembled it in CAD with existing piping, optical, and electrical component models (tolerances set by the supervising team, with some intuition-based input from me) and fabricated and physically assembled the resulting experimental prototype rig (laser/camera included).
+        \item Conducted stereoPIV and flow visualization on the built hardware to confirm the design met its laminar-flow target, producing structured validation reports comparing as-built performance against design intent.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% ----- Remaining projects (UAV Airfoil Selection, Gas Turbine Design
+% Toolkit, Flow Past a Cylinder, Wind-Tunnel Airfoil Testing, Formation
+% Flight, Thin Airfoil Theory, Space Mission Design Toolkit, Underwater
+% Acoustic Signal Processing, 6DOF Flight Simulator, MCP Servers) trimmed
+% for this profile -- kept only in the MASTER block above (do not delete).
+% ===== END ACTIVE: RR Dahlewitz -- Mass Properties Management =====
+
+%---------- Certifications & Training----------
+% Commented out per user preference (for now) -- not deleted, just not
+% rendered on this profile.
+% \section{Certifications \& Training}
+% \color[HTML]{371e77}\textbf{CATIA} \color[HTML]{000000}-- Internshala -- \textit{May 2021}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{SOLIDWORKS} \color[HTML]{000000}-- Internshala -- \textit{Jun 2020}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{Ansys} \color[HTML]{000000}-- Internshala -- \textit{May 2021}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{AutoCAD with AI} \color[HTML]{000000}-- Internshala -- \textit{Jun 2020}
+% \normalcolor\\
+% \color[HTML]{371e77}\textbf{MATLAB} \color[HTML]{000000}-- Internshala -- \textit{Mar 2025}
+% \normalcolor
+
+%---------- Extracurricular Activities----------
+\section{Extracurricular Activities}
+\color[HTML]{371e77}\textbf{Aerodynamics Club, Chandigarh University} \color[HTML]{000000}-- \textit{2018 -- 2022} -- team-built RC aircraft and static wind-tunnel models as part of coursework projects
+\normalcolor\\
+\color[HTML]{371e77}\textbf{\ulhref{https://github.com/Sanjanakamboj/flowsleuth}{FlowSleuth — Agentic CFD Root-Cause Diagnostics}, micro1 Frontier Engineering Challenge 2026 (Hackathon)} \color[HTML]{000000}-- \textit{Aug 2026} -- built an agentic diagnostic tool for failed/stalled OpenFOAM CFD runs, improving root-cause accuracy from a 63.42/100 baseline to 98.48/100 across a 12-case benchmark
+\normalcolor
+
+\end{document}

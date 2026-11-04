@@ -1,0 +1,195 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip}
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\usepackage{graphicx}
+
+\RequirePackage{color}
+% \RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[left=0.8cm, right=0.8cm, top=0.7cm, bottom=0.7cm, scale=1]{geometry}
+\definecolor{371e77}{HTML}{371E77}
+
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+
+%tabularx environment
+\usepackage{tabularx}
+\usepackage[most]{tcolorbox}
+
+%for lists within the experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}p}
+\newtcolorbox{summarybox}{
+  colback=white,
+  colframe=371e77,
+  boxrule=0.8pt,
+  arc=2pt,
+  left=6pt,
+  right=6pt,
+  top=5pt,
+  bottom=5pt
+}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\vspace{1pt}\titlerule\vspace{1pt}]
+\titlespacing{\section}{0pt}{3pt}{4pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+\definecolor{myPurple}{HTML}{371e77}
+
+\usepackage[unicode]{hyperref}
+\usepackage[normalem]{ulem} % for \uline
+
+% No forced hyperlink color:
+\hypersetup{
+    colorlinks=true,
+    linkcolor=.,   % inherit surrounding color
+    urlcolor=.,    % inherit surrounding color
+    citecolor=black
+}
+
+\newcommand{\ulhref}[2]{%
+  {\hypersetup{urlcolor=.}\textcolor{.}{\href{#1}{\uline{#2}}}}%
+}
+
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+% \usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+
+%============================================================
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+% ---------- Name (do not edit) ----------
+\color[HTML]{1C033C}\Huge{\textbf{SANJANA RANI}} \\[0.4cm]
+
+% ---------- Designation (EDIT PER TARGET ROLE) ----------
+% TODO: 3-4 keyword phrases, pipe-separated, matching the role family you're targeting
+\color[HTML]{371e77}\large{\textit{[ROLE TITLE] | [DOMAIN/SPECIALTY KEYWORDS] | [KEY TOOL/LANGUAGE]
+}}\\[0.6cm]
+
+% ---------- Contact Information (do not edit) ----------
+\small\textcolor[HTML]{371e77}{
+  \raisebox{-0.2\height}{\includegraphics[height=9pt]{phone.png}}\,+91-9996673079\,|\,
+  \raisebox{-0.2\height}{\includegraphics[height=9pt]{mail.png}}\,sanjanakamboj98@gmail.com\,|\,
+    \raisebox{-0.2\height}{\includegraphics[height=9pt]{linkedin.png}}\,\ulhref{https://linkedin.com/in/sanjana-rani}{linkedin.com/in/sanjana-rani}\,|\,
+    \raisebox{-0.2\height}{\includegraphics[height=9pt]{github.png}}\,\ulhref{https://github.com/Sanjanakamboj}{github.com/Sanjanakamboj}}\normalsize\\
+
+
+\end{tabularx}
+
+% ---------- Professional Summary (EDIT PER TARGET ROLE) ----------
+\begin{summarybox}
+{\bfseries\color[HTML]{371e77}PROFESSIONAL SUMMARY}\\
+% TODO: 3-4 sentences. What you are, your core cross-cutting strength/habit,
+% and a trait relevant to how this employer works (team size, pace, domain).
+[SUMMARY: who you are, your standout working habit/strength, and one trait relevant to this employer.]
+\end{summarybox}
+
+%----------Skills----------
+\section{Key Skills}
+% TODO: one \textbf{Category:} line per skill group, most relevant to the
+% target job first. Keep 5-9 categories; drop groups the job doesn't touch.
+\color[HTML]{371e77}\textbf{[CATEGORY 1]:} \color[HTML]{000000}[tool, tool, tool]
+\normalcolor\\
+\color[HTML]{371e77}\textbf{[CATEGORY 2]:} \color[HTML]{000000}[tool, tool, tool]
+\normalcolor\\
+\color[HTML]{371e77}\textbf{[CATEGORY 3]:} \color[HTML]{000000}[tool, tool, tool]
+\normalcolor\\
+\color[HTML]{371e77}\textbf{Languages:} \color[HTML]{000000}English (Fluent), French (Beginner), German (A1, improving)
+\normalcolor
+
+%----------Experience----------
+\section{Professional Experience}
+% TODO: one tabularx block per role, most recent first.
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{[ORGANIZATION], [CITY, COUNTRY]} \hfill \color[HTML]{371e77} \textit{[START] -- [END]} \\[1pt]
+\color[HTML]{371e77}\textbf{[JOB TITLE]}\ \hfill \color[HTML]{4B28A4} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item [BULLET: action verb + what you did + tool/method used + outcome/result.]
+        \item [BULLET: action verb + what you did + tool/method used + outcome/result.]
+        \item [BULLET: action verb + what you did + tool/method used + outcome/result.]
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+%---------- Education----------
+\section{Education}
+% TODO: one tabularx block per degree, most recent first.
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{[DEGREE TITLE]} \hfill \color[HTML]{371e77} \textit{[START] -- [END]}
+\newline
+\color[HTML]{371e77}\textbf{[INSTITUTION(S)] (\href{}{City, Country})}\ \hfill \color[HTML]{4B28A4}  \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item \textbf{Thesis:} [thesis title, if relevant to this application]
+        \item \textbf{Selected Coursework:} [course, course, course -- pick ones matching the job description]
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+%----------Freelance/Other Experience (optional -- delete section if unused)----------
+\section{Freelance Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{[ROLE/ENGAGEMENT NAME]} \hfill \color[HTML]{371e77} \textit{[START] -- [END]} \\[1pt]
+\color[HTML]{371e77}\textbf{[CLIENT/CONTEXT]}\ \hfill \color[HTML]{4B28A4} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item [BULLET: action verb + what you did + tool/method used + outcome/result.]
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+%---------- Courses & Certifications (optional -- delete section if unused)----------
+\section{Courses \& Certifications}
+% TODO: one line per course, most relevant/recent first.
+\color[HTML]{371e77}\textbf{[COURSE/CERT NAME]} \color[HTML]{000000}-- [ISSUER] -- \textit{[DATE]}
+\normalcolor
+
+%----------Projects----------
+\section{Selected Projects}
+% TODO: one tabularx block per project, most relevant to the target job first.
+% Pick 3-5; keep the rest in Resume.tex's MASTER block for other applications.
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\ulhref{[PROJECT URL]}{[PROJECT TITLE]}} — \color[HTML]{371e77}\textbf{[Self-directed / Org name]} \hfill \textit{[START] -- [END]}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=*, itemsep=1pt]
+        \item [BULLET: what you built + method/tool + validation or result, tied to what this job needs.]
+        \item [BULLET: what you built + method/tool + validation or result, tied to what this job needs.]
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\end{document}

@@ -1,6 +1,6 @@
 \documentclass[a4paper,8pt]{article}
 
-\usepackage{parskip} 
+\usepackage{parskip}
 \usepackage{hologo}
 \usepackage{fontspec}
 
@@ -18,19 +18,19 @@
 \usepackage{enumitem}
 
 % Centered version of 'X' column
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 % Custom section formatting
 \usepackage{titlesec}
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{2pt}{2pt}
+\titlespacing{\section}{0pt}{6pt}{8pt}
 
 % Hyperlinks
 \usepackage[unicode]{hyperref}
 \usepackage[normalem]{ulem}
 \hypersetup{
     colorlinks=true,
-    linkcolor=., 
+    linkcolor=.,
     urlcolor=.,
     citecolor=black
 }
@@ -39,7 +39,7 @@
 % Social icons
 \usepackage{fontawesome5}
 
-\setmainfont{Arial} 
+\setmainfont{Arial}
 
 \begin{document}
 \pagestyle{empty} % no page numbers
@@ -47,42 +47,44 @@
 % ==================== Header ====================
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \color[HTML]{1C033C}\Huge{\textbf{SANJANA RANI}} \\
-\color[HTML]{371E77}\large{Graduate Aerospace Engineer | Aerodynamics • Acoustics • Experimental Testing • Data Analysis} \\
-\textcolor[HTML]{371E77}{
+\color[HTML]{371e77}\large{\textit{Aerospace Engineer | Gas Turbine Aerodynamics \& CFD | Python/MATLAB
+}}\\[0.6cm]\textcolor[HTML]{371E77}{
+  \raisebox{-0.2\height}{\includegraphics[height=12pt]{phone.png}} \, +91-9996673079 \, | \,
   \raisebox{-0.2\height}{\includegraphics[height=12pt]{mail.png}} \, sanjanakamboj98@gmail.com \, | \,
-  \raisebox{-0.2\height}{\includegraphics[height=12pt]{phone.png}} \, +49(0)15251347327 \, | \,
-    \raisebox{-0.2\height}{\includegraphics[height=12pt]{linkedin.png}} \, 
-\ulhref{https://linkedin.com/in/sanjana-rani}{linkedin.com/in/sanjana-rani}
+    \raisebox{-0.2\height}{\includegraphics[height=12pt]{linkedin.png}} \,
+\ulhref{https://linkedin.com/in/sanjana-rani}{linkedin.com/in/sanjana-rani} \, | \,
+    \raisebox{-0.2\height}{\includegraphics[height=12pt]{github.png}} \,
+\ulhref{https://github.com/Sanjanakamboj}{github.com/Sanjanakamboj}
 }
 \end{tabularx}
 
-\vspace{0.5cm}
+\vspace{0.4cm}
 
 % ==================== Date & Recipient ====================
 \noindent
 \textbf{Date:} \today \\
 
-German Aerospace Center (DLR)\\
-Recruitment Team\\
-Cochstedt, Germany\\
+Mr. Eric Blidmark, GTC Engineering Manager\\
+GKN Aerospace -- Global Technology Center, Future Concepts\\
+Trollh\"attan, Sweden\\
+
+\vspace{0.2cm}
 
 % ==================== Subject ====================
 \noindent
-\textbf{Subject: Application for Research Associate --- Aircraft Noise from Advanced Air Mobility (Ref.\ No.\ 4364)}\\
+\textbf{Subject: Application for Aerodynamics Engineer -- Future Concepts, GTC}\\
 
-Dear Hiring Team,\\
+Dear Mr. Blidmark,
 
-I am writing to apply for the Research Associate position in Aircraft Noise from Advanced Air Mobility (Ref. No. 4364) at the Institute of Aerodynamics and Flow Technology in Cochstedt. I hold a Joint Master’s degree in Transfer of Fluid Materials in Aeronautical \& Space Applications (TFM-ASA) and have gained hands-on experience in aeroacoustic measurements, experimental aerodynamics, and Python-based signal processing through my work at DLR and university laboratories. Having contributed to acoustic sensor validation within DLR, I am motivated to extend this experience towards aircraft noise modelling, simulation benchmarking, and advanced air mobility research.\\
+I am writing to apply for the Aerodynamics Engineer position in the Future Concepts team at GKN Aerospace's Global Technology Center. I hold a joint international Master's degree in Transfer of Fluid Materials in Aeronautical and Space Applications (TFM-ASA) across Universit\'e de Bordeaux, UCLouvain, and BTU Cottbus, with hands-on experience across multiple fidelity levels of turbomachinery aerodynamic design.
 
-During my Graduate Research Assistantship at the DLR Institute of Electrified Aero Engines, I contributed to the development and experimental validation of acoustic and vibroacoustic sensor systems for EMC/EMI testing under the LU(FT)\(^2\) 2030 project, including building a prototype EMI testing rig at the Braunschweig facility. I monitored time-based signals using DEWESoft and designed 
-Python-based signal processing pipelines --- FFT, coherence analysis, and spectral subtraction --- to evaluate sensor sensitivity and noise susceptibility across 2 microphone types and 4 spatial configurations over a 0--50\,kHz frequency range. I also performed cross-modal comparisons of accelerometer and microphone magnitude spectra to characterise near-field and far-field noise behaviour and quantify measurement uncertainty. This work gave me end-to-end experience with acoustic measurement campaigns --- from rig design and data acquisition through to signal processing and uncertainty analysis.\\
+I designed and validated an axial turbine stage from 1D mean-line thermodynamics through 2D compressible RANS simulation (SU2, GMSH, ParaView) -- the same mean-line-to-CFD progression this role's methodology spans -- and built a self-directed OpenFOAM practice covering turbulence-model comparisons and mesh generation. My ANSYS Fluent experience comes from a Bachelor's final project and a freelance internship at Simulation Lab studying airfoil performance across angle-of-attack sweeps. Separately, I built a from-first-principles CFD study of cylinder flow, cross-validating a from-scratch Navier-Stokes solver and an OpenFOAM mesh-independence study against published Strouhal-number and drag-coefficient data.
 
-Prior to DLR, as a Student Assistant at the Chair of Aerodynamics and Fluid Mechanics at BTU Cottbus, I supported the TEKUS/DEPIK zero-gravity convection experiment, contributing to mechanical assembly, experimental integration, flow-quality validation, and PIV-based flow analysis. Alongside my professional experience, my Joint MSc provided strong foundations in experimental aerodynamics 
-and flow measurement techniques, complemented by project work spanning stereo-PIV flow analysis, reduced-order aerodynamic modelling in Python, and hands-on acoustic measurement --- including an SPL survey of a running compressor to characterise near-field noise distribution at varying heights. These experiences across experimental and computational workflows have strengthened my ability to independently analyse complex data while contributing effectively within collaborative research teams.\\
+Across all of this work, my consistent habit is to validate every result against an analytical solution, published data, or an independent method before trusting it -- the same rigor I understand this role expects when moving between fidelity levels and design stages.
 
-This position represents an opportunity to build directly on my experimental and signal processing background in a research environment I already know and respect. I am drawn to DLR's work on Advanced Air Mobility noise not only because it connects to my previous acoustic measurement experience, but because it sits at the intersection of a genuinely open scientific problem and a rapidly evolving field. I am eager to contribute to flight test campaigns and simulation benchmarking at Cochstedt, and to develop deeper expertise in noise source modelling and immission prediction methods. Longer term, I am motivated to grow as an independent researcher --- publishing results, collaborating with project partners, and contributing to DLR's position at the forefront of aeroacoustics research.\\
+I want to be upfront about a few things: my Swedish is not yet at a working level, though I am fluent in English and motivated to build Swedish proficiency given the opportunity. My hands-on CFD experience has been in aerodynamic and fluid-dynamic analysis rather than the aeroacoustics, aeroelastic (flutter/forced response), or heat transfer analyses this role also involves, and I have not used UG-NX or worked with Model-Based Systems Engineering. I see these as genuine areas to grow into, backed by a strong foundation in thermodynamics, aerodynamics, and CFD methodology.
 
-I am aware that the role requires strong German language skills. My current level is A1, and I am actively improving, with the goal of reaching B1 by the end of 2026. I am confident in my ability to work effectively in English in international research environments and committed to further developing my German alongside my work. I would welcome the opportunity to discuss my application further and am available for an interview at your convenience. Thank you for considering my application.\\
+I have enclosed my CV and would welcome the opportunity to discuss how my background fits the team's needs. Thank you for your consideration.
 
 Sincerely,\\
 \textbf{Sanjana Rani}
